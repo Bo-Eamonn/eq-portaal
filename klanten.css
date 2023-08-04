@@ -1,0 +1,97 @@
+* {
+  /* -webkit-box-sizing: border-box; */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+label,
+li,
+p,
+strong,
+textarea {
+  color: #000000;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
+  font-family: 'New Century Schoolbook', 'TeX Gyre Schola', serif;
+}
+
+
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  height: 5vh;
+  padding: 0 20px;
+}
+
+
+header img {
+  max-height: 5vh;
+  margin: 0 auto;
+  /* Center the image horizontally */
+}
+
+header h1 {
+  font-size: 20px;
+  margin-left: 20px;
+  float: left;
+
+}
+
+/* Aside styles */
+aside {
+  background-color: #333;
+  font-style: normal;
+  /* position: sticky; */
+  min-width: 10vw;
+  min-height: 95vh;
+  float: left;
+}
+
+aside nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+aside nav li {
+  padding: 10px;
+  color: white;
+}
+
+main {
+  max-width: 79vw;
+  max-height: 80vh;
+  min-width: 79vw;
+  min-height: 80vh;
+  background: #00ccffc6;
+  float: left;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 7.5vh 5vw 7.5vh 5vw;
+
+  border-radius: 25px;
+  box-shadow: inset 5px 5px 10px 1px #FFC927;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main>section {
+  padding: 20px;
+}
