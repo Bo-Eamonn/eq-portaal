@@ -26,15 +26,10 @@ Qua kleuren eigenlijk de kleuren te gebruiken vanuit het logo, Dan krijg je Blau
 
 ### Home
 De home page bestaat bestaat uit 3 delen
-1. Header
-In de header hebben we een burger icoontje om op mobile de navigatie te veranderen.
-In het midden het logo van de onderneming waarmee de gebruiker is ingelogt.
-Hier direct rechts naast hebben we de naam van de onderneming.
-Helemaal rechts hebben we de optie om uit te loggen.
-2. NAV/Aside
+1. NAV/Aside
 Rechts van het scherm hebben we de navigatie. Vanuit hier kan de klant kiezen wat er in de main weergegeven word.
 Onderaan de nav is een optie om van _light_ naar _dark_ theme te switchen.
-3. Main
+2. Main>Section
 De ruimte die nu op de pagina leeg is, is de main. Hierin worden de pagina's weergegeven worden welk vanuit de nav opgevraagd worden.
 
 *Personeel*
