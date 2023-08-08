@@ -1,0 +1,548 @@
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#712cf9">
+    <title>Eqpos Portaal - Transactie Contract</title>
+
+    <!-- External Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+    <script src="js/colorTheme.js" defer></script>
+
+    <!-- External Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <style>
+        .card {
+            border: 1px solid rgba(0, 0, 0, 0.125);
+
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.01);
+        }
+    </style>
+
+</head>
+
+<body>
+    <main class="d-flex flex-nowrap">
+        <!-- Navigation -->
+        <aside class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px; min-height: 100vh;">
+            <a href="#"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <h3>Eqpos Portaal</h3>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="/home.html" class="nav-link link-body-emphasis">
+                        <i class="bi bi-house"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="https://eqposnl.zendesk.com/" target="_blank" class="nav-link link-body-emphasis">
+                        <i class="bi bi-ticket-perforated"></i>
+                        Zendesk
+                    </a>
+                </li>
+                <li>
+                    <a href="https://eqpos.saysimple.io/" target="_blank" class="nav-link link-body-emphasis">
+                        <i class="bi bi-chat-dots"></i>
+                        Saysimple
+                    </a>
+                </li>
+                <li>
+                    <a href="klanten.html" class="nav-link link-body-emphasis">
+                        <i class="bi bi-people"></i>
+                        Klanten
+                    </a>
+                </li>
+                <li>
+                    <a href="voorraad.html" class="nav-link link-body-emphasis">
+                        <i class="bi bi-inboxes"></i>
+                        Voorraad
+                    </a>
+                </li>
+                <li>
+                    <a href="Kennisbank.html" class="nav-link link-body-emphasis">
+                        <i class="bi bi-book"></i>
+                        Kennisbank
+                    </a>
+                </li>
+                <li>
+                    <a href="gegevens.html" class="nav-link active" aria-current="page">
+                        <i class="bi bi-person-lines-fill"></i>
+                        Gegevens
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-link link-body-emphasis">
+                        <i class=" bi bi-headset"></i>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div>
+                <button id="btnSwitch" class="btn btn-outline-light border border-1 shadow">Light Mode</button>
+                <button id="btnSwitch" class="btn btn-outline-warning border border-1 shadow">uitloggen </button>
+            </div>
+        </aside>
+        <!-- Page Content -->
+        <section class="container-fluid  p-3" style="max-height: 100vh; overflow-y: scroll;">
+            <div class="container-fluid bg-body-tertiary rounded-4">
+                <form class="m-3 p-5">
+                    <h1 class="text-center mb-1 ">Transactie Contract</h1>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Bedrijfsgegevens</h4><hr>
+                                    <input type="text" id="companyName" placeholder="Bedrijfsnaam"
+                                        autocomplete="organization" required>
+                                    <input type="number" id="kvkNumber" placeholder="KvK-nummer" autocomplete="off"
+                                        required>
+                                    <input type="email" id="email" placeholder="E-mail" autocomplete="email" required>
+                                    <input type="url" id="website" placeholder="Website" autocomplete="url">
+                                    <input type="tel" id="phone" placeholder="Telefoon" autocomplete="tel" required>
+                                    <h4 class="text-center mb-3">Bankgegevens</h4><hr>
+                                    <input type="text" id="accountHolder" placeholder="Rekeninghouder" required>
+                                    <input type="text" id="ibanNumber" placeholder="IBAN-nummer" autocomplete="off"
+                                        required>
+                                    <input type="text" id="recieveSubject"
+                                        placeholder="Gewenste bijschijving omschrijving" autocomplete="off">
+                                    <input type="text" id="paySubject" placeholder="Gewenste afschijving omschrijving"
+                                        autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Contractgegevens</h4><hr>
+                                    <p>Geslacht</p>
+                                    <label><input type="checkbox" name="gender" value="male">Man</label>
+                                    <label><input type="checkbox" name="gender" value="female">Vrouw</label>
+                                    <label><input type="checkbox" name="gender" value="other">Anders</label>
+                                    <input type="text" id="firstName" placeholder="Voornaam" required>
+                                    <input type="text" id="middleName" placeholder="Tussenvoegsel">
+                                    <input type="text" id="lastName" placeholder="Achternaam" required>
+                                    <input type="text" id="contractPostalCode" placeholder="Postcode"
+                                        autocomplete="postal-code">
+                                    <input type="number" id="contractHouseNumber" placeholder="Huisnummer" required>
+                                    <input type="text" id="contractAddition" placeholder="Toevoeging">
+                                    <input type="text" id="contractResidence" placeholder="Woonplaats" required>
+                                    <input type="text" id="contractStreet" placeholder="Straat" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Factuuradres</h4><hr>
+                                    <label><input type="checkbox" id="sameAddress" name="sameAddress">Gelijk aan
+                                        contractadres</label>
+                                    <input type="text" id="billingPostalCode" placeholder="Postcode"
+                                        autocomplete="postal-code">
+                                    <input type="number" id="billingHouseNumber" placeholder="Huisnummer">
+                                    <input type="text" id="billingAddition" placeholder="Toevoeging">
+                                    <input type="text" id="billingResidence" placeholder="Woonplaats">
+                                    <input type="text" id="billingStreet" placeholder="Straat">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">UBO Verklaring</h4><hr>
+                                    <!-- UBO content hier -->
+                                    <div class="container border border-1 rounded-1" style="max-height: 20rem; overflow-y: scroll;">
+                                        <h5>Europese Wetgeving en Uiteindelijk Belanghebbende (UBO)</h5>
+                                        <p>
+                                            <strong>Europese wetgeving</strong> voor financiële instellingen schrijft
+                                            voor om
+                                            van haar klanten de <strong>uiteindelijk belanghebbende(n)</strong> vast te
+                                            stellen
+                                            en te verifiëren. In Nederland is dit vastgelegd in de <strong>Wet ter
+                                                voorkoming
+                                                van het gebruik van het financiële stelsel voor het witwassen van geld
+                                                en de
+                                                financiering van terrorisme</strong>. De <strong>uiteindelijk
+                                                belanghebbende</strong> (ook bekend als de <strong>Ultimate Beneficial
+                                                Owner</strong> of <strong>UBO</strong>) is de natuurlijke persoon namens
+                                            wie
+                                            handel wordt gedreven.
+                                        </p>
+
+                                        <h5>Voorwaarden voor UBO</h5>
+                                        <ul>
+                                            <li>Een natuurlijk persoon heeft een belang van <strong>25% of meer</strong>
+                                                in het
+                                                aandelenkapitaal of vermogen van uw bedrijf;</li>
+                                            <li>Een natuurlijk persoon heeft <strong>25% of meer</strong> van de
+                                                stemrechten in
+                                                uw bedrijf;</li>
+                                            <li>Een persoon heeft feitelijke zeggenschap over uw bedrijf (de persoon
+                                                heeft het
+                                                in de praktijk voor het zeggen);</li>
+                                            <li>Een persoon is begunstigde van <strong>25% of meer</strong> van het
+                                                vermogen van
+                                                een trust;</li>
+                                            <li>Een persoon heeft bijzondere zeggenschap over <strong>25% of
+                                                    meer</strong> van
+                                                het vermogen van uw bedrijf (dit is vastgelegd in bijvoorbeeld de
+                                                statuten).
+                                            </li>
+                                        </ul>
+
+                                        <h5>UBO bij Personenvennootschappen</h5>
+                                        <ul>
+                                            <li>Als het bedrijf een personenvennootschap is (vof, cv of maatschap), is
+                                                de
+                                                <strong>uiteindelijk belanghebbende</strong> de natuurlijke persoon die:
+                                            </li>
+                                            <li>Recht heeft op <strong>25% of meer</strong> van de gemeenschap bij
+                                                ontbinding;
+                                            </li>
+                                            <li>Recht heeft op <strong>25% of meer</strong> van de winsten;</li>
+                                            <li>Bij besluitvorming <strong>25% of meer</strong> van de stemmen kan
+                                                uitoefenen;
+                                            </li>
+                                            <li>Feitelijke zeggenschap kan uitoefenen over de personenvennootschap.</li>
+                                        </ul>
+
+                                        <h5>Speciale Gevallen</h5>
+                                        <p>
+                                            Als het bedrijf een <strong>beursgenoteerde onderneming</strong> is, hoeft
+                                            de
+                                            verklaring niet ingevuld te worden. In het geval van een
+                                            <strong>eenmanszaak</strong> wordt de eigenaar beschouwd als de
+                                            <strong>uiteindelijk
+                                                belanghebbende</strong>.
+                                        </p>
+
+                                        <h5>Uitzonderingen</h5>
+                                        <p>
+                                            Niet elk bedrijf heeft een <strong>uiteindelijk belanghebbende</strong>.
+                                            Bijvoorbeeld, als een rechtspersoon <strong>4 of meer eigenaren</strong>
+                                            heeft met
+                                            een gelijke verdeling van kapitaal, inkomsten en zeggenschap, is er geen
+                                            sprake van
+                                            een uiteindelijk belanghebbende. Geen van de eigenaren heeft in dat geval
+                                            namelijk
+                                            meer dan <strong>25% aandeel</strong>.
+                                        </p>
+
+                                        <h5>Verplichte Invulling</h5>
+                                        <p>
+                                            Dit formulier moet <strong>altijd worden ingevuld</strong> bij elke
+                                            contractrelatie
+                                            van of namens een bedrijf met Esmepay, behalve voor beursgenoteerde
+                                            ondernemingen.
+                                            Dit is <strong>wettelijk bepaald</strong> en geldt voor alle financiële
+                                            instellingen
+                                            binnen Europa.
+                                        </p>
+                                    </div>
+
+                                    <label for="uboDeclaration"><input type="checkbox" id="uboDeclaration"
+                                            name="uboDeclaration" required>
+                                        Ik heb de UBO verklaring gelezen.</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Politiek Prominent Persoon</h4><hr>
+                                    <div class="container border border-1 rounded-1" style="max-height: 20rem; overflow-y: scroll;">
+                                        <p>
+                                            Een politiek prominent persoon (politically exposed person of PEP) is iemand
+                                            die een
+                                            politieke functie heeft (of een dergelijke functie tot een jaar geleden
+                                            heeft
+                                            uitgeoefend)
+                                            en die:
+                                        </p>
+                                        <ul>
+                                            <li>Niet de Nederlandse nationaliteit heeft</li>
+                                            <li>De Nederlandse nationaliteit heeft maar niet in Nederland woont.</li>
+                                        </ul>
+                                        <p>
+                                            Voorbeelden van politiek prominente personen:
+                                        </p>
+                                        <ul>
+                                            <li>Staatshoofden, regeringsleiders, ministers, staatssecretarissen en
+                                                parlementsleden
+                                            </li>
+                                            <li>Ambassadeurs, zaakgelastigden en hoge legerofficieren</li>
+                                            <li>Leden van hooggerechtshoven en andere hoge gerechtelijke instanties</li>
+                                            <li>Leden van rekenkamers en van directies van centrale banken</li>
+                                            <li>Directe familieleden van politiek prominente personen, zoals de
+                                                echtgenoot, de
+                                                ouders en
+                                                de kinderen.</li>
+                                        </ul>
+                                        <p>
+                                            Voor klanten en uiteindelijk begunstigden die politiek prominente personen
+                                            zijn zal
+                                            Sepay
+                                            nader onderzoek uitvoeren.
+                                        </p>
+                                    </div>
+                                    <label for="pepCheckbox" class="font-weight-bold">Bent u, als rechtsgeldig
+                                        vertegenwoordiger
+                                        en/of is een of meer van de uiteindelijk belanghebbenden een politiek prominent
+                                        persoon?</label>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="pepCheckbox" name="pepStatus"
+                                            value="yes" required>
+                                        <label class="form-check-label" for="pepCheckbox">Ja</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" id="pepCheckbox2" name="pepStatus"
+                                            value="no" required>
+                                        <label class="form-check-label" for="pepCheckbox2">Nee</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Belanghebbende</h4><hr>
+                                    <div class="form-group">
+                                        <label for="aantalEigenaren" class="font-weight-bold">Aantal eigenaren met een
+                                            belang van minimaal 25%: *</label>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="owner1" value="1">
+                                            <label class="form-check-label" for="owner1">1</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="owner2" value="2">
+                                            <label class="form-check-label" for="owner2">2</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="owner3" value="3">
+                                            <label class="form-check-label" for="owner3">3</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="owner4" value="4">
+                                            <label class="form-check-label" for="owner4">4</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="ownerPseudo"
+                                                value="Pseudo">
+                                            <label class="form-check-label" for="ownerPseudo">Pseudo</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6 col-12">
+                                            <h5>Eigenaar 1</h5>
+                                            <input type="number" id="directInterest" placeholder="Direct belang"
+                                                required>
+                                            <input type="number" id="indirectInterest" placeholder="Indirect belang"
+                                                required>
+                                            <input type="text" id="ownerOneFirstName" placeholder="Voornaam" required>
+                                            <input type="text" id="ownerOneMiddleName" placeholder="Tussenvoegsel">
+                                            <input type="text" id="ownerOneLastName" placeholder="Achternaam" required>
+                                            Geslacht
+                                            <label><input type="checkbox" name="ownerOneGender" value="male">Man</label>
+                                            <label><input type="checkbox" name="ownerOneGender"
+                                                    value="female">Vrouw</label>
+                                            <label><input type="checkbox" name="ownerOneGender"
+                                                    value="other">Anders</label>
+                                            <label for="birthDate">Geboortedatum</label>
+                                            <input type="date" id="birthDate" required>
+                                            <input type="text" id="documentNumber"
+                                                placeholder="Documentnummer (geen Sofinummer)" required>
+                                            <input type="text" id="ownerPostalCode" placeholder="Postcode"
+                                                autocomplete="postal-code" required>
+                                            <input type="number" id="ownerHouseNumber" placeholder="Huisnummer"
+                                                required>
+                                            <input type="text" id="ownerAddition" placeholder="Toevoeging" required>
+                                            <input type="text" id="ownerResidence" placeholder="Woonplaats" required>
+                                            <input type="text" id="ownerStreet" placeholder="Straat" required>
+                                            <!-- Identificatie en upload velden hier -->
+                                            <p>Upload uw identificatiebewijs</p>
+                                            <input type="file" id="idOwnerOne1" required>
+                                            <input type="file" id="idOwnerOne2">
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 col-12">
+                                            <h5>Eigenaar 2</h5>
+                                            <input type="number" id="directInterest" placeholder="Direct belang"
+                                                required>
+                                            <input type="number" id="indirectInterest" placeholder="Indirect belang"
+                                                required>
+                                            <input type="text" id="ownerTwoFirstName" placeholder="Voornaam" required>
+                                            <input type="text" id="ownerTwoMiddleName" placeholder="Tussenvoegsel">
+                                            <input type="text" id="ownerTwoLastName" placeholder="Achternaam" required>
+                                            Geslacht
+                                            <label><input type="checkbox" name="ownerTwoGender" value="male">Man</label>
+                                            <label><input type="checkbox" name="ownerTwoGender"
+                                                    value="female">Vrouw</label>
+                                            <label><input type="checkbox" name="ownerTwoGender"
+                                                    value="other">Anders</label>
+                                            <label for="birthDate">Geboortedatum</label>
+                                            <input type="date" id="birthDate" required>
+                                            <input type="text" id="documentNumber"
+                                                placeholder="Documentnummer (geen Sofinummer)" required>
+                                            <input type="text" id="ownerPostalCode" placeholder="Postcode"
+                                                autocomplete="postal-code" required>
+                                            <input type="number" id="ownerHouseNumber" placeholder="Huisnummer"
+                                                required>
+                                            <input type="text" id="ownerAddition" placeholder="Toevoeging" required>
+                                            <input type="text" id="ownerResidence" placeholder="Woonplaats" required>
+                                            <input type="text" id="ownerStreet" placeholder="Straat" required>
+                                            <!-- Identificatie en upload velden hier -->
+                                            <p>Upload uw identificatiebewijs</p>
+                                            <input type="file" id="idOwnerTwo1" required>
+                                            <input type="file" id="idOwnerTwo2">
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 col-12">
+                                            <h5>Eigenaar 3</h5>
+                                            <input type="number" id="directInterest" placeholder="Direct belang"
+                                                required>
+                                            <input type="number" id="indirectInterest" placeholder="Indirect belang"
+                                                required>
+                                            <input type="text" id="ownerThreeFirstName" placeholder="Voornaam" required>
+                                            <input type="text" id="ownerThreeMiddleName" placeholder="Tussenvoegsel">
+                                            <input type="text" id="ownerThreeLastName" placeholder="Achternaam"
+                                                required>
+                                            Geslacht
+                                            <label><input type="checkbox" name="ownerThreeGender"
+                                                    value="male">Man</label>
+                                            <label><input type="checkbox" name="ownerThreeGender"
+                                                    value="female">Vrouw</label>
+                                            <label><input type="checkbox" name="ownerThreeGender"
+                                                    value="other">Anders</label>
+                                            <label for="birthDate">Geboortedatum</label>
+                                            <input type="date" id="birthDate" required>
+                                            <input type="text" id="documentNumber"
+                                                placeholder="Documentnummer (geen Sofinummer)" required>
+                                            <input type="text" id="ownerPostalCode" placeholder="Postcode"
+                                                autocomplete="postal-code" required>
+                                            <input type="number" id="ownerHouseNumber" placeholder="Huisnummer"
+                                                required>
+                                            <input type="text" id="ownerAddition" placeholder="Toevoeging" required>
+                                            <input type="text" id="ownerResidence" placeholder="Woonplaats" required>
+                                            <input type="text" id="ownerStreet" placeholder="Straat" required>
+                                            <!-- Identificatie en upload velden hier -->
+                                            <p>Upload uw identificatiebewijs</p>
+                                            <input type="file" id="idOwnerThree1" required>
+                                            <input type="file" id="idOwnerThree2">
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 col-12">
+                                            <h5>Eigenaar 4</h5>
+                                            <input type="number" id="directInterest" placeholder="Direct belang"
+                                                required>
+                                            <input type="number" id="indirectInterest" placeholder="Indirect belang"
+                                                required>
+                                            <input type="text" id="ownerFourFirstName" placeholder="Voornaam" required>
+                                            <input type="text" id="ownerFourMiddleName" placeholder="Tussenvoegsel">
+                                            <input type="text" id="ownerFourLastName" placeholder="Achternaam" required>
+                                            Geslacht
+                                            <label><input type="checkbox" name="ownerFourGender"
+                                                    value="male">Man</label>
+                                            <label><input type="checkbox" name="ownerFourGender"
+                                                    value="female">Vrouw</label>
+                                            <label><input type="checkbox" name="ownerFourGender"
+                                                    value="other">Anders</label>
+                                            <label for="birthDate">Geboortedatum</label>
+                                            <input type="date" id="birthDate" required>
+                                            <input type="text" id="documentNumber"
+                                                placeholder="Documentnummer (geen Sofinummer)" required>
+                                            <input type="text" id="ownerPostalCode" placeholder="Postcode"
+                                                autocomplete="postal-code" required>
+                                            <input type="number" id="ownerHouseNumber" placeholder="Huisnummer"
+                                                required>
+                                            <input type="text" id="ownerAddition" placeholder="Toevoeging" required>
+                                            <input type="text" id="ownerResidence" placeholder="Woonplaats" required>
+                                            <input type="text" id="ownerStreet" placeholder="Straat" required>
+                                            <!-- Identificatie en upload velden hier -->
+                                            <p>Upload uw identificatiebewijs</p>
+                                            <input type="file" id="idOwnerFour1" required>
+                                            <input type="file" id="idOwnerFour2">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Omzetgegevens</h4><hr>
+                                    <p>
+                                        In het kader van de <strong>Wet op het financieel toezicht [Wft]</strong> (o.a.
+                                        bestrijding van witwassen
+                                        en terrorismefinanciering) is het onze plicht financiële transacties te
+                                        monitoren en te
+                                        controleren of uw dienstverlening en producten niet in strijd zijn met deze Wft.
+                                        Ook
+                                        gedurende het toekomstige gebruik van onze producten/diensten zullen wij dit
+                                        blijven
+                                        controleren en monitoren.
+                                    </p>
+                                    <label for="pinTransactions" class="font-weight-bold">Wat voor producten en/of
+                                        diensten
+                                        worden afgerekend met de pinautoma(a)t(en)? *</label>
+                                    <input type="text" id="pinTransactions" name="pinTransactions"
+                                        placeholder="Bijvoorbeeld: Als u een restaurant heeft, voer dan in voedingsmiddelen."
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 p-3">
+                            <div class="card mb-3 shadow-lg rounded-5 p-3">
+                                <div class="card-body">
+                                    <h4 class="text-center mb-3">Ondertekenen</h4><hr>
+                                    <p>
+                                        De "Eqpos" transactiedienst via de Sepay betaaldienst bestaat uit het
+                                        beschikbaar
+                                        stellen van de mogelijkheid om elektronisch betalingsverkeer te verrichten. De
+                                        overeenkomst wordt aangegaan onder de opschortende voorwaarde van acceptatie van
+                                        de
+                                        klant door Sepay B.V.. De Algemene Voorwaarden Sepay zijn van toepassing op deze
+                                        overeenkomst, waarmee u zich akkoord verklaart. U verklaart kennis te hebben
+                                        genomen van
+                                        de Algemene Voorwaarden als onderdeel van de aanvraagprocedure en zoals vermeld
+                                        op de
+                                        website (<a href="www.eqpos.nl">www.eqpos.nl</a> & <a
+                                            href="www.sepay.nl">www.sepay.nl</a>) en deze te accepteren.
+                                    </p>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="acceptTerms"
+                                            name="acceptTerms" required>
+                                        <label class="form-check-label" for="acceptTerms">Ik ga akkoord met de Algemene
+                                            Voorwaarden</label>
+                                    </div>
+                                </div>
+
+                                <!-- Handtekeningsveld -->
+                                Handtekening <br>
+                                <button type="submit" class=" btn btn-outline-success">Verzenden</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
