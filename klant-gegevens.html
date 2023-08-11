@@ -87,7 +87,7 @@
         <!-- Page Content -->
         <section class="container-fluid bg-body-tertiary m-4 rounded-4 p-3">
             <div class="container-fluid rounded-5">
-                
+
                 <h1 class="text-center mb-1 ">Klant gegevens</h1>
 
                 <div class="row">
@@ -144,14 +144,14 @@
                             <h4 class="text-center mb-3">Set : Supermarkt</h4>
                             <hr>
                             <div class="card-body">
-
                                 <div class="accordion accordion-flush" id="accordionFlushExample">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
                                                 aria-expanded="false" aria-controls="flush-collapseOne">
-                                                Kassa's 2
+                                                <span class="badge bg-primary text-white me-2">3</span>
+                                                Kassa's
                                             </button>
                                         </h2>
                                         <div id="flush-collapseOne" class="accordion-collapse collapse"
@@ -162,7 +162,7 @@
                                                         <thead>
                                                             <tr>
                                                                 <th>Type</th>
-                                                                <th>Serie nummer</th>
+                                                                <th>S/N</th>
                                                                 <th>Functie</th>
                                                                 <th>Opmerkingen</th>
                                                             </tr>
@@ -170,25 +170,25 @@
                                                         <tbody class="table-group-divider">
                                                             <tr>
                                                                 <td>Jassway</td>
-                                                                <td>JWE20230216174</td>
+                                                                <td>KW20230001</td>
                                                                 <td>Slijterij</td>
                                                                 <td>Geen KD</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>PC</td>
-                                                                <td>DG8HJ93K</td>
+                                                                <td>PC123456</td>
                                                                 <td>Backoffice / Hoofdkassa</td>
                                                                 <td></td>
                                                             </tr>
                                                             <tr>
                                                                 <td>PC</td>
-                                                                <td>FP6K8W5M</td>
+                                                                <td>PC789012</td>
                                                                 <td>Client 1</td>
                                                                 <td>Vervangend model</td>
                                                             </tr>
                                                             <tr>
                                                                 <td>PC</td>
-                                                                <td>VX9C3D2R</td>
+                                                                <td>PC345678</td>
                                                                 <td>Client 1</td>
                                                                 <td>Boot-loop is retour gekomen</td>
                                                             </tr>
@@ -198,74 +198,169 @@
                                             </div>
                                         </div>
                                     </div>
+                                
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
                                                 aria-expanded="false" aria-controls="flush-collapseTwo">
-                                                Pinautomaten 2
+                                                <span class="badge bg-primary text-white me-2">2</span>
+                                                Pinautomaten
                                             </button>
                                         </h2>
                                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                             data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is
-                                                intended to demonstrate the <code>.accordion-flush</code> class. This is
-                                                the second item's accordion body. Let's imagine this being filled with
-                                                some actual content.</div>
+                                            <div class="accordion-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover shadow text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>S/N</th>
+                                                                <th>Mac Adres</th>
+                                                                <th>POI</th>
+                                                                <th>TID</th>
+                                                                <th>Locatie</th>
+                                                                <th>Opmerkingen</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="table-group-divider">
+                                                            <tr>
+                                                                <td>PA20230001</td>
+                                                                <td>00:11:22:33:44:55</td>
+                                                                <td>123456789</td>
+                                                                <td>987654321</td>
+                                                                <td>Slijterij</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>PA20230002</td>
+                                                                <td>00:AA:BB:CC:DD:EE</td>
+                                                                <td>987654321</td>
+                                                                <td>123456789</td>
+                                                                <td>Client 1</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                 
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
                                                 aria-expanded="false" aria-controls="flush-collapseThree">
-                                                Kassa lades 2
+                                                <span class="badge bg-primary text-white me-2">2</span>
+                                                Kassalades
                                             </button>
                                         </h2>
                                         <div id="flush-collapseThree" class="accordion-collapse collapse"
                                             data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is
-                                                intended to demonstrate the <code>.accordion-flush</code> class. This is
-                                                the third item's accordion body. Nothing more exciting happening here in
-                                                terms of content, but just filling up the space to make it look, at
-                                                least at first glance, a bit more representative of how this would look
-                                                in a real-world application.</div>
+                                            <div class="accordion-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover shadow text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>S/N</th>
+                                                                <th>Type</th>
+                                                                <th>Opmerkingen</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="table-group-divider">
+                                                            <tr>
+                                                                <td>KL20230001</td>
+                                                                <td>FlipTop</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>KL20230002</td>
+                                                                <td>Normal</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseFour"
                                                 aria-expanded="false" aria-controls="flush-collapseFour">
-                                                Magellan Weegschaal 1
+                                                <span class="badge bg-primary text-white me-2">1</span>
+                                                Magellan Weegschaal
                                             </button>
                                         </h2>
                                         <div id="flush-collapseFour" class="accordion-collapse collapse"
                                             data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is
-                                                intended to demonstrate the <code>.accordion-flush</code> class. This is
-                                                the third item's accordion body. Nothing more exciting happening here in
-                                                terms of content, but just filling up the space to make it look, at
-                                                least at first glance, a bit more representative of how this would look
-                                                in a real-world application.</div>
+                                            <div class="accordion-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover shadow text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>S/N</th>
+                                                                <th>Type</th>
+                                                                <th>Opmerkingen</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="table-group-divider">
+                                                            <tr>
+                                                                <td>MG20230001</td>
+                                                                <td>I9000</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                  
                                     <div class="accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse" data-bs-target="#flush-collapseFive"
                                                 aria-expanded="false" aria-controls="flush-collapseFive">
-                                                Bon Printers 3
+                                                <span class="badge bg-primary text-white me-2">3</span>
+                                                Bon Printers
                                             </button>
                                         </h2>
                                         <div id="flush-collapseFive" class="accordion-collapse collapse"
                                             data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">Placeholder content for this accordion, which is
-                                                intended to demonstrate the <code>.accordion-flush</code> class. This is
-                                                the third item's accordion body. Nothing more exciting happening here in
-                                                terms of content, but just filling up the space to make it look, at
-                                                least at first glance, a bit more representative of how this would look
-                                                in a real-world application.</div>
+                                            <div class="accordion-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-hover shadow text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>S/N</th>
+                                                                <th>Type of connection</th>
+                                                                <th>Opmerkingen</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="table-group-divider">
+                                                            <tr>
+                                                                <td>BP20230001</td>
+                                                                <td>Direct</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>BP20230002</td>
+                                                                <td>Direct</td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>BP20230003</td>
+                                                                <td>Direct</td>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -273,10 +368,9 @@
                         </div>
                     </div>
                 </div>
-
+            </div>
         </section>
     </main>
 </body>
 
 </html>
-
