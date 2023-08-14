@@ -88,7 +88,8 @@
                 <h1>Overzicht</h1>
                 <hr>
                 <div class="row justify-content-center d-flex">
-                    <div class="col col-lg-3 col-md-6 col-sm-12 shadow">
+                    <!-- Storingen Card -->
+                    <div class="col-md-6 col-sm-6 col-12 p-3 shadow">
                         <div class="card m-1 p2">
                             <div class="card-header">
                                 <h1 class="text-danger">Storingen</h1>
@@ -103,28 +104,104 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col col-lg-3 col-md-6 col-sm-12 shadow">
+
+                    <!-- Status Card -->
+                    <div class="col-md-6 col-sm-6 col-12 p-3 shadow">
                         <div class="card m-1 p2">
                             <div class="card-header">
                                 <h1 class="text-warning">Status</h1>
                             </div>
                             <div class="card-body text-start">
                                 <ul class="list-group list-group-flush text-dark">
-                                    <li class="list-group-item bg-success rounded-3 my-1 text-dark" title="10 augustus 2023"><strong>Installatie gepland</strong></li>
-                                    <li class="list-group-item bg-success rounded-3 my-1 text-dark"><strong>Gegevens Aangeleverd</strong></li>
-                                    <li class="list-group-item bg-warning rounded-3 my-1 text-dark"><strong>Installatie voltooid</strong></li>
-                                  </ul>
+                                    <li class="list-group-item bg-success rounded-3 my-1 text-dark"
+                                        title="10 augustus 2023"><strong>Installatie gepland</strong></li>
+                                    <li class="list-group-item bg-success rounded-3 my-1 text-dark"><strong>Gegevens
+                                            Aangeleverd</strong></li>
+                                    <li class="list-group-item bg-warning rounded-3 my-1 text-dark"><strong>Installatie
+                                            voltooid</strong></li>
+                                </ul>
                             </div>
                             <div class="card-footer">
                                 <button class="btn btn-large btn-outline-primary">
-                                    Meld een storing!
+                                    nutteloze knop
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bedrijfsgegevens Card -->
+                    <div class="col-md-6 col-sm-6 col-12 p-3 shadow">
+                        <div class="card m-1 p2">
+                            <div class="card-header d-flex justify-content-between">
+                                <h1 class="text-success">Bedrijfsgegevens</h1>
+                                <a href="gegevens.html" class="btn btn-sm btn-outline-primary"><i
+                                        class="bi bi-pencil-square"></i> Bewerken</a>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td>Naam:</td>
+                                            <td>Bedrijfsnaam</td>
+                                        </tr>
+                                        <tr>
+                                            <td>KvK-nummer:</td>
+                                            <td>12345678</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adres:</td>
+                                            <td>Straatnaam 123, Plaats</td>
+                                        </tr>
+                                        <tr>
+                                            <td>IBAN:</td>
+                                            <td>NL12ABCD3456789012</td>
+                                        </tr>
+                                        <!-- Add more rows as needed -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Card -->
+                    <div class="col-md-6 col-sm-6 col-12 p-3 shadow">
+                        <div class="card m-1 p2">
+                            <div class="card-header d-flex justify-content-between">
+                                <h1 class="text-info">Contact</h1>
+                                <a href="gegevens.html" class="btn btn-sm btn-outline-primary"><i
+                                        class="bi bi-pencil-square"></i> Bewerken</a>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="3">
+                                                <h5 class="text-center">Owner</h5>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Name:</td>
+                                            <td>John Doe</td>
+                                            <td rowspan="3"><i class="bi bi-person-circle"></i></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone:</td>
+                                            <td>123-456-7890</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <!-- Add more rows for Manager and Employee -->
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 </body>
 
